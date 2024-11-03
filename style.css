@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+body{
+    background-color: #ffe9dc;
+    color: rgb(0, 0, 0);
+}
+
+header nav{
+    background-color: #c99789;
+    padding: 1rem;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.208);
+}
+
+header nav h1{
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form{
+    display: flex;
+    width: 80%;
+    height: auto;
+}
+
+
+form input[type="text"]{
+    flex-grow: 1;
+    margin-right: 10px;   
+}
+
+form input[type="text"], button[type="submit"]{
+    border: none;
+    margin-left: 20px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50px;
+    height: 50px;
+}
+
+form button[type="submit"]{
+    background-color: #8f2100;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover, .recipe button:hover{
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.recipe-container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+}
+
+.recipe{
+    background-color: 	#dfa290;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    max-width: 300px;
+}
+
+.recipe img{
+    height: 300px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.recipe h3{
+    font-size: 25px;
+}
+
+.recipe p{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin: 5px 0;
+}
+
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color:  #e0a899;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.173);
+    font-size: 20px;
+    overflow-y: scroll;
+}
+
+.recipe-details-content{
+    padding: 30px;
+    margin: 50px;
+}
+
+.recipe-details-content h2{
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    font-size: 100px;
+}
+.recipe-details-content h3{
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.recipe-details-content ul{
+    list-style: square;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    padding-left: 25px;
+}
+
+
+
+
+.recipe-details::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+}
+
+.recipe-details::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: #8f2100;
+}
+
+.recipe button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px;
+    background-color: #8f2100;
+    color: white;
+    border: none;
+}
+
+.recipe-close{
+    border: none;
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+@media screen and 
+(max-width:600px){
+    header nav{
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+        margin-top: 20px;
+    }   
+}
